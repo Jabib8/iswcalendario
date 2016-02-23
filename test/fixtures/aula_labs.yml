@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recintos: 
+  descripcion: MyString
+  observacion: MyString
+  personas: 
+
+two:
+  recintos: 
+  descripcion: MyString
+  observacion: MyString
+  personas: 

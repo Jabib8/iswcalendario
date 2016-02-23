@@ -1,0 +1,33 @@
+<h1>Listing periodos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Estado</th>
+      <th>Fecha inicio</th>
+      <th>Fecha final</th>
+      <th>Aula labs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @periodos.each do |periodo| %>
+      <tr>
+        <td><%= periodo.nombre %></td>
+        <td><%= periodo.estado %></td>
+        <td><%= periodo.fecha_inicio %></td>
+        <td><%= periodo.fecha_final %></td>
+        <td><%= periodo.aula_labs %></td>
+        <td><%= link_to 'Show', periodo %></td>
+        <td><%= link_to 'Edit', edit_periodo_path(periodo) %></td>
+        <td><%= link_to 'Destroy', periodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Periodo', new_periodo_path %>

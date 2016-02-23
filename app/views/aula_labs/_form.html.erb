@@ -1,0 +1,33 @@
+<%= form_for(@aula_lab) do |f| %>
+  <% if @aula_lab.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aula_lab.errors.count, "error") %> prohibited this aula_lab from being saved:</h2>
+
+      <ul>
+      <% @aula_lab.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :recintos %><br>
+    <%= f.text_field :recintos %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :observacion %><br>
+    <%= f.text_field :observacion %>
+  </div>
+  <div class="field">
+    <%= f.label :personas %><br>
+    <%= f.text_field :personas %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

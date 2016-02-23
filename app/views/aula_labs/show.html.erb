@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recintos:</strong>
+  <%= @aula_lab.recintos %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @aula_lab.descripcion %>
+</p>
+
+<p>
+  <strong>Observacion:</strong>
+  <%= @aula_lab.observacion %>
+</p>
+
+<p>
+  <strong>Personas:</strong>
+  <%= @aula_lab.personas %>
+</p>
+
+<%= link_to 'Edit', edit_aula_lab_path(@aula_lab) %> |
+<%= link_to 'Back', aula_labs_path %>

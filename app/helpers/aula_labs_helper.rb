@@ -1,0 +1,2 @@
+module AulaLabsHelper
+end

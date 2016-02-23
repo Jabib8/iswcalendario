@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @recinto.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @recinto.direccion %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @recinto.horario %>
+</p>
+
+<%= link_to 'Edit', edit_recinto_path(@recinto) %> |
+<%= link_to 'Back', recintos_path %>

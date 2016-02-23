@@ -1,0 +1,31 @@
+<h1>Listing aula_labs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Recintos</th>
+      <th>Descripcion</th>
+      <th>Observacion</th>
+      <th>Personas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aula_labs.each do |aula_lab| %>
+      <tr>
+        <td><%= aula_lab.recintos %></td>
+        <td><%= aula_lab.descripcion %></td>
+        <td><%= aula_lab.observacion %></td>
+        <td><%= aula_lab.personas %></td>
+        <td><%= link_to 'Show', aula_lab %></td>
+        <td><%= link_to 'Edit', edit_aula_lab_path(aula_lab) %></td>
+        <td><%= link_to 'Destroy', aula_lab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aula lab', new_aula_lab_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  estado: false
+  fecha_inicio: 2016-02-23
+  fecha_final: 2016-02-23
+  aula_labs: 
+
+two:
+  nombre: MyString
+  estado: false
+  fecha_inicio: 2016-02-23
+  fecha_final: 2016-02-23
+  aula_labs: 

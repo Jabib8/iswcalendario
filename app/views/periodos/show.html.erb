@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @periodo.nombre %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @periodo.estado %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @periodo.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Fecha final:</strong>
+  <%= @periodo.fecha_final %>
+</p>
+
+<p>
+  <strong>Aula labs:</strong>
+  <%= @periodo.aula_labs %>
+</p>
+
+<%= link_to 'Edit', edit_periodo_path(@periodo) %> |
+<%= link_to 'Back', periodos_path %>

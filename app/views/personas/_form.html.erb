@@ -1,0 +1,53 @@
+<%= form_for(@persona) do |f| %>
+  <% if @persona.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@persona.errors.count, "error") %> prohibited this persona from being saved:</h2>
+
+      <ul>
+      <% @persona.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.check_box :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.text_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :contrasena %><br>
+    <%= f.text_field :contrasena %>
+  </div>
+  <div class="field">
+    <%= f.label :carreras %><br>
+    <%= f.text_field :carreras %>
+  </div>
+  <div class="field">
+    <%= f.label :cursos %><br>
+    <%= f.text_field :cursos %>
+  </div>
+  <div class="field">
+    <%= f.label :perfil %><br>
+    <%= f.text_field :perfil %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_usuario %><br>
+    <%= f.text_field :tipo_usuario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

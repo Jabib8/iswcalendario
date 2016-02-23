@@ -1,0 +1,37 @@
+<%= form_for(@periodo) do |f| %>
+  <% if @periodo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@periodo.errors.count, "error") %> prohibited this periodo from being saved:</h2>
+
+      <ul>
+      <% @periodo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.check_box :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio %><br>
+    <%= f.date_select :fecha_inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_final %><br>
+    <%= f.date_select :fecha_final %>
+  </div>
+  <div class="field">
+    <%= f.label :aula_labs %><br>
+    <%= f.text_field :aula_labs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

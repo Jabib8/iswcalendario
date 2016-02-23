@@ -1,0 +1,2 @@
+module RecintosHelper
+end

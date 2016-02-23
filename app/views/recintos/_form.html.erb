@@ -1,0 +1,29 @@
+<%= form_for(@recinto) do |f| %>
+  <% if @recinto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recinto.errors.count, "error") %> prohibited this recinto from being saved:</h2>
+
+      <ul>
+      <% @recinto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :horario_id %><br>
+    <%= f.text_field :horario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
